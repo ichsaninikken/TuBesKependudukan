@@ -72,16 +72,16 @@
                                                 </td>
                                             </tr>
 
-                                            @foreach($detailkk as $item)
-                                            @if ( $kartuKeluarga->nomor === $item->kartu_keluargas->nomor)
-                                            <tr>
-                                                <td>{{ $item->kartu_keluargas->nomor}}</td>
+                                                    @foreach($detailkk as $item)
+                                                    @if ( $kartuKeluarga->nomor === $item->kartu_keluargas->nomor)
+                                                <tr>
+                                                    <td>{{ $item->kartu_keluargas->nomor}}</td>
                                                 <td>{{ $item->penduduks->nama}}</td>
                                                 <td>{{ $item->hubungan}} </td>
                                                 <td>
                                                     <form action="/detailKks/{{$item->id}}" method="POST">
                                                         @method('GET')
-                                                        <a href="/penduduks/{{$item->penduduks->id }}" class="btn btn-primary">View</a>
+                                                        <a href="/penduduk/{{$item->penduduks->id }}" class="btn btn-primary">View</a>
                                                         @can('manage-admins')
                                                         <a href="/detailKks/{{$item->id}}/edit" class="btn btn-warning">Edit</a>
                                                         @csrf

@@ -68,7 +68,7 @@ class KartuKeluargaController extends Controller
         $detailkk = DetailKk::all();
         return view('kartuKeluargas.show', [
             'kartuKeluarga' => $kartuKeluarga,
-            'detailkk' => $detailkk,
+            'detailkk' => $detailkk
         ]);
     }
 
